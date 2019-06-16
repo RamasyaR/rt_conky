@@ -1,0 +1,82 @@
+use_xft yes
+xftfont 123:size=8
+xftalpha 1
+update_interval 1
+total_run_times 0
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+
+double_buffer yes
+#minimum_size 250 5
+#maximum_width 500
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 30
+gap_y 50
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes
+#use_spacer left
+minimum_size 0 0
+TEXT
+#
+###### Name, image and version distro ######
+#
+${if_match "${execi 10000 lsb_release -is}"=="Debian"}
+${voffset -10}${offset 25}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Debian ${execi 10000 lsb_release -rs}
+${image ~/.conky/rt_conky/images/debian.png -p 2,3 -s 20x20}
+#
+${else}${if_match "${execi 10000 lsb_release -is}"=="Ubuntu"}
+${voffset -6}${offset 24}${color FCFFFF}${font NanumGothic:Bold:pixelsize=15}Ubuntu ${execi 10000 lsb_release -rs}${voffset 10}
+${image ~/.conky/rt_conky/images/ubuntu.png -p 1,3 -s 23x23}
+#
+${else}${if_match "${execi 10000 lsb_release -is}"=="LinuxMint"}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Mint ${execi 10000 lsb_release -rs}${voffset -2}
+${image ~/.conky/rt_conky/images/linux_mint.png -p 3,3 -s 24x22}
+#
+${else}${if_match "${execi 10000 lsb_release -is}"=="Arch"}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Arch Linux${voffset -2}
+${image ~/.conky/rt_conky/images/archlinux_1.png -p 2,3 -s 23x23}
+#
+${else}${if_match "${execi 10000 lsb_release -is}"=="Fedora"}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Fedora ${execi 10000 lsb_release -rs}${voffset -2}
+${image ~/.conky/rt_conky/images/fedora_logo.png -p 5,5 -s 20x20}
+#
+${else}
+${voffset -8}${offset 50}${color FCFFFF}${font NanumGothic:Bold:pixelsize=20}Linux${voffset -8}
+${image ~/.conky/rt_conky/images/tux.png -p 15,0 -s 30x30}
+${endif}${endif}${endif}${endif}${endif}
+#
+###### Clock and Date ######
+#
+${voffset -42}${offset 2}${color FCFFFF}${font clock2017R_v0.2_161128:pixelsize=120}${time %H}
+${voffset -15}${offset 2}${color FCFFFF}${font clock2017R_v0.2_161128:pixelsize=120}${time %M}
+${voffset -95}${offset 9}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18} ${time %a, %e %b}
+#
+###### System ######
+#
+${font NanumGothic:Bold:pixelsize=12}
+${image ~/.conky/rt_conky/images/Chip.png -p 1,280 -s 20x20}${offset 27}${voffset 2}${cpu cpu 1}% / ${cpu cpu 2}%
+${image ~/.conky/rt_conky/images/mirco.png -p 1,315 -s 20x20}${offset 27}${voffset 20}$mem/$memmax
+${image ~/.conky/rt_conky/images/up.png -p 3,350 -s 15x15}${offset 27}${voffset 20}${upspeed enp3s0}
+${image ~/.conky/rt_conky/images/dwn.png -p 3,385 -s 15x15}${offset 27}${voffset 20}${downspeed enp3s0}
+#
+###### Sides ######
+#
+${image ~/.conky/rt_conky/images/side.png -p 0,30 -s 125x4}
+${image ~/.conky/rt_conky/images/side.png -p 0,267 -s 125x4}
+${image ~/.conky/rt_conky/images/side.png -p 0,410 -s 125x4}
