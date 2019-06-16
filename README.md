@@ -1,1 +1,1 @@
-# theme_conky
+# Conky theme
