@@ -3,6 +3,7 @@
 This theme has been tested on:
 - Debian 9.9
 - Experimental Ubuntu 19.10
+- Fedora 30 (need "yum install redhat-lsb")
 
 This theme has been created using source code:
 - Jesse Avalos https://www.deviantart.com/speedracker/art/Side-thin-conky-Made-for-Conky-Manager-513212857
