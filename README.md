@@ -11,4 +11,4 @@ Used fonts:
 - NanumGothic Bold
 - clock2017R_v0.2_161128
 
-![screen](https://github.com/RamasyaR/rt_conky/blob/master/screenshot/screen.jpg)
+![screen](https://github.com/RamasyaR/rt_conky/blob/master/screenshot/screenshoot.jpg)
