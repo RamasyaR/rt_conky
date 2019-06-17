@@ -42,7 +42,7 @@ ${voffset -10}${offset 25}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}De
 ${image ~/.conky/rt_conky/images/debian.png -p 2,3 -s 20x20}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="Ubuntu"}
-${voffset -6}${offset 24}${color FCFFFF}${font NanumGothic:Bold:pixelsize=15}Ubuntu ${execi 10000 lsb_release -rs}${voffset 10}
+${voffset -6}${offset 24}${color FCFFFF}${font NanumGothic:Bold:pixelsize=15}Ubuntu ${execi 10000 lsb_release -rs}
 ${image ~/.conky/rt_conky/images/ubuntu.png -p 1,3 -s 23x23}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="LinuxMint"}
