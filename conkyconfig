@@ -54,7 +54,7 @@ ${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Arc
 ${image ~/.conky/rt_conky/images/archlinux_1.png -p 2,3 -s 23x23}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="Fedora"}
-${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Fedora ${execi 10000 lsb_release -rs}${voffset -2}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Fedora ${execi 10000 lsb_release -rs}${voffset -10}
 ${image ~/.conky/rt_conky/images/fedora_logo.png -p 5,5 -s 20x20}
 #
 ${else}
