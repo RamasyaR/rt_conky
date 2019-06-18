@@ -1,4 +1,6 @@
 # Conky theme
+This сonky theme automatically determines the distribution name, version, and displays them along with the logo. If the distribution is not known, the Tux is displayed.
+Recognizable distributions: Debian, Linux Mint, Ubuntu, Fedora, Arch Linux.
 
 This theme has been tested on:
 - Debian 9.9
