@@ -38,7 +38,7 @@ TEXT
 ###### Name, image and version distro ######
 #
 ${if_match "${execi 10000 lsb_release -is}"=="Debian"}
-${voffset -10}${offset 25}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Debian ${execi 10000 lsb_release -rs}
+${voffset -10}${offset 25}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Debian ${execi 10000 lsb_release -rs}${voffset -4}
 ${image ~/.conky/rt_conky/images/debian.png -p 2,3 -s 20x20}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="Ubuntu"}
@@ -46,27 +46,30 @@ ${voffset -6}${offset 24}${color FCFFFF}${font NanumGothic:Bold:pixelsize=15}Ubu
 ${image ~/.conky/rt_conky/images/ubuntu.png -p 1,3 -s 23x23}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="LinuxMint"}
-${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Mint ${execi 10000 lsb_release -rs}${voffset -2}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Mint ${execi 10000 lsb_release -rs}${voffset -10}
 ${image ~/.conky/rt_conky/images/linux_mint.png -p 3,3 -s 24x22}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="Arch"}
-${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Arch Linux${voffset -2}
+${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Arch Linux${voffset -10}
 ${image ~/.conky/rt_conky/images/archlinux_1.png -p 2,3 -s 23x23}
 #
 ${else}${if_match "${execi 10000 lsb_release -is}"=="Fedora"}
 ${voffset -8}${offset 30}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}Fedora ${execi 10000 lsb_release -rs}${voffset -10}
 ${image ~/.conky/rt_conky/images/fedora_logo.png -p 5,5 -s 20x20}
 #
-${else}
-${voffset -8}${offset 50}${color FCFFFF}${font NanumGothic:Bold:pixelsize=20}Linux${voffset -8}
+${else}${if_match "${execi 10000 lsb_release -is}"=="elementary"}
+${voffset -3}${offset 24}${color FCFFFF}${font NanumGothic:Bold:pixelsize=14}Elementary ${execi 10000 lsb_release -rs}${voffset -4}
+${image ~/.conky/rt_conky/images/elementary.png -p 2,7 -s 20x20}
+#
+${else}${voffset -8}${offset 50}${color FCFFFF}${font NanumGothic:Bold:pixelsize=20}Linux${voffset -8}
 ${image ~/.conky/rt_conky/images/tux.png -p 15,0 -s 30x30}
-${endif}${endif}${endif}${endif}${endif}
+${endif}${endif}${endif}${endif}${endif}${endif}
 #
 ###### Clock and Date ######
 #
-${voffset -42}${offset 2}${color FCFFFF}${font clock2017R_v0.2_161128:pixelsize=120}${time %H}
+${voffset -38}${offset 2}${color FCFFFF}${font clock2017R_v0.2_161128:pixelsize=120}${time %H}
 ${voffset -15}${offset 2}${color FCFFFF}${font clock2017R_v0.2_161128:pixelsize=120}${time %M}
-${voffset -95}${offset 9}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18} ${time %a, %e %b}
+${voffset -95}${offset 13}${color FCFFFF}${font NanumGothic:Bold:pixelsize=18}${time %a, %e %b}
 #
 ###### System ######
 #
