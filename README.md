@@ -5,6 +5,7 @@ Recognizable distributions: Debian, Linux Mint, Ubuntu, Fedora, Arch Linux.
 This theme has been tested on:
 - Debian 9.9
 - Experimental Ubuntu 19.10
+- Elementary OS 5.0 Juno 
 - Fedora 30 (need "yum install redhat-lsb")
 
 This theme has been created using source code:
@@ -14,4 +15,4 @@ Used fonts:
 - NanumGothic Bold
 - clock2017R_v0.2_161128
 
-![screen](https://github.com/RamasyaR/rt_conky/blob/master/screenshot/screenshoot.jpg)
+![screen](https://github.com/RamasyaR/rt_conky/blob/master/screenshot/screenshot.jpg)
