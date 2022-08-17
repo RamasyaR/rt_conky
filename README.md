@@ -17,16 +17,11 @@ Used fonts:
 
 ![screen](https://github.com/RamasyaR/rt_conky/blob/master/screenshot/screenshot.jpg)
 
-### Installation and run with git:
+### Installation and run:
 ```sh
 $ git clone https://github.com/RamasyaR/rt_conky.git
-$ cp -R ./rt_conky/ ./.conky/
-$ conky -c ./.conky/rt_conky/conkyconfig 
-```
-### Installation and run with wget:
-```sh
-$ wget https://github.com/RamasyaR/rt_conky/archive/master.zip
-$ unzip master.zip
-$ cp -R ./rt_conky-master/ ./.conky/rt_conky/
-$ conky -c ./.conky/rt_conky/conkyconfig 
+$ cp -r ./rt_conky/fonts/* ~/.local/share/fonts
+$ fc-cache -f -v
+$ cp -R ./rt_conky/ ~/.conky/
+$ conky -c ~/.conky/rt_conky/conkyconfig 
 ```
